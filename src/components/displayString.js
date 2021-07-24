@@ -5,7 +5,7 @@ const DisplayString = () =>
 	<div
 		className="display"
 	>
-		{ context.state.randomString }
+		{ context.state.rnString }
 	</div>;
 
 export default DisplayString;

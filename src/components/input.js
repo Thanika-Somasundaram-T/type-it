@@ -3,17 +3,18 @@
 import { React } from 'react';
 import context from '../core/context';
 
-const Check = (evt) =>
-	evt.keyCode >= 65
-	&& evt.keyCode <= 122
-	&& context.actions.updateInput(evt.key);
+const Check = (key) =>
+	(context.state.rnString[context.state.count] === key
+		? context.actions.updateInput(key)
+		: context.state.input === context.state.rnString
+		&& context.actions.refreshString());
 
 const Input = () =>
 	<div
 		className="input"
 		value={ false }
 		contentEditable={ true }
-		onKeyUp={ (evt) => Check(evt) }
+		onKeyUp={ (evt) => Check(evt.key) }
 	/>;
 
 export default Input;
