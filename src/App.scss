@@ -1,0 +1,30 @@
+.App {
+	text-align: center;
+
+	button {
+		font-weight: bold;
+	}
+}
+
+.display {
+	position: absolute;
+	height: 10%;
+	width: 100%;
+	top: 50%;
+	margin-top: -5%;
+	background-color: rgb(123, 251, 255);
+}
+
+.input {
+	position: absolute;
+	height: 0%;
+}
+
+.text {
+	position: absolute;
+	height: 10%;
+	width: 100%;
+	top: 55%;
+	color: white;
+	background-color: rgb(3, 84, 90);
+}
