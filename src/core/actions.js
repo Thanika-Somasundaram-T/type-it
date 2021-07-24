@@ -1,4 +1,6 @@
+import config from './config';
 import Service from '../services/getString';
+
 const increaseScore = ({ state, data }) => ({
 	count: state.count + data,
 });
@@ -8,10 +10,11 @@ const updateInput = ({ state, data }) => ({
 	count: state.count + 1,
 });
 
-const refreshString = () => ({
+const refreshString = ({ state }) => ({
 	count: 0,
 	input: '',
 	rnString: Service.randomString,
+	score: state.score + config.increment,
 });
 
 const actions = {

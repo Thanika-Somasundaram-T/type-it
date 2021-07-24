@@ -1,7 +1,6 @@
-import config from './config';
 
 const seed = {
-	score: config.score,
+	score: 0,
 	input: '',
 	rnString: 'Welcome',
 	count: 0,

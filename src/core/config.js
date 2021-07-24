@@ -1,5 +1,5 @@
 const config = {
-	score: 0,
+	increment: 10,
 };
 
 export default config;
