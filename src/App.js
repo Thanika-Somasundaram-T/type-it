@@ -5,6 +5,7 @@ import SampleService from './services/sample';
 import context from './core/context';
 import DisplayString from './components/displayString';
 import Input from './components/input';
+import TrueFalse from './components/tureOrNot';
 
 const App = () => {
 	useEffect(SampleService.sayHai, []);
@@ -12,11 +13,16 @@ const App = () => {
 	return (
 		<div className="App">
 			<div className="score"> SCORE { context.state.score }</div>
+			{ TrueFalse() }
 			{ DisplayString() }
 			{ Input() }
 			<div className="text">{ context.state.input }</div>
-			<div className="type">{ context.state.usrTyped }</div>
-			<div className="to-type">{ context.state.toType }</div>
+			<div
+				className="to-type"
+				style={ context.state.toType !== ''
+					? { minWidth: '10%' }
+					: { } }
+			>{ context.state.toType }</div>
 		</div>
 	);
 };

@@ -1,5 +1,6 @@
 .App {
 	text-align: center;
+	font-family: 'Times New Roman';
 
 	button {
 		font-weight: bold;
@@ -12,19 +13,37 @@
 	text-align: end;
 }
 
+.img {
+	position: absolute;
+	height: 35%;
+	min-width: 30%;
+	top: 17%;
+	left: 53%;
+	background-image: url('tick.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 .display {
 	position: absolute;
 	height: 20%;
 	width: 100%;
 	top: 50%;
 	background-color: #7bfbff;
-	font-size: 5em;
+	font-size: 4em;
 }
 
 .input {
 	position: absolute;
+	height: 0%;
+
+}
+
+.button {
+	position: absolute;
 	height: 10%;
-	background-color: green;
+	width: 10%;
+	left: 50%;
 }
 
 .text {
@@ -34,26 +53,26 @@
 	top: 70%;
 	color: white;
 	background-color: #03545a;
-	font-size: 5em;
+	font-size: 4em;
 }
 
-.type {
+.to-type {
 	position:absolute;
 	background-color: #7bfbff;
-	height: 30%;
+	height: 20%;
 	max-width: 40%;
-	font-size: 8em;
+	font-size: 5em;
 	top: 20%;
 	right: 60%;
 	text-align: center;
 }
 
-.to-type {
+.type {
 	position:absolute;
-	background-color: #03545a;
-	height:30%;
+	background-color: #d10202;
+	height:20%;
 	max-width: 40%;
-	font-size: 8em;
+	font-size: 5em;
 	top: 20%;
 	left: 60%;
 	color: white;

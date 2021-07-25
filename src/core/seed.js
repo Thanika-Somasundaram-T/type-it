@@ -2,10 +2,11 @@
 const seed = {
 	score: 0,
 	input: '',
-	rnString: 'w',
+	rnString: 'welcome',
 	count: 0,
-	usrTyped: 'west',
-	toType: 'west',
+	usrTyped: '',
+	toType: '',
+	value: false,
 };
 
 export default seed;
