@@ -1,11 +1,12 @@
 /* eslint-disable no-magic-numbers */
 import { rndString } from '@laufire/utils/random';
 
-const num = 10;
-const refresh = Math.floor(Math.random() * num) + 5;
+const refresh = Math.floor(Math.random() * 10) + 5;
+
+const RandomString = () => rndString(refresh);
 
 const Service = {
-	randomString: rndString(refresh),
+	RandomString,
 };
 
 export default Service;

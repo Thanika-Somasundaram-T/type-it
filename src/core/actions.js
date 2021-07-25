@@ -13,7 +13,7 @@ const updateInput = ({ state, data }) => ({
 const refreshString = ({ state }) => ({
 	count: 0,
 	input: '',
-	rnString: Service.randomString,
+	rnString: Service.RandomString(),
 	score: state.score + config.increment,
 });
 
