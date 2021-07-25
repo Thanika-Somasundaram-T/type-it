@@ -6,12 +6,19 @@
 	}
 }
 
+.score{
+	position: absolute;
+	font-size: 3em;
+	text-align: end;
+}
+
 .display {
 	position: absolute;
-	height: 10%;
+	height: 20%;
 	width: 100%;
-	top: 45%;
-	background-color: rgb(123, 251, 255);
+	top: 50%;
+	background-color: #7bfbff;
+	font-size: 5em;
 }
 
 .input {
@@ -22,9 +29,34 @@
 
 .text {
 	position: absolute;
-	height: 10%;
+	height: 20%;
 	width: 100%;
-	top: 55%;
+	top: 70%;
 	color: white;
-	background-color: rgb(3, 84, 90);
+	background-color: #03545a;
+	font-size: 5em;
 }
+
+.type {
+	position:absolute;
+	background-color: #7bfbff;
+	height: 30%;
+	max-width: 40%;
+	font-size: 8em;
+	top: 20%;
+	right: 60%;
+	text-align: center;
+}
+
+.to-type {
+	position:absolute;
+	background-color: #03545a;
+	height:30%;
+	max-width: 40%;
+	font-size: 8em;
+	top: 20%;
+	left: 60%;
+	color: white;
+}
+
+

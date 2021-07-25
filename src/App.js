@@ -11,10 +11,12 @@ const App = () => {
 
 	return (
 		<div className="App">
-			<div> SCORE { context.state.score }</div>
-			{ Input() }
+			<div className="score"> SCORE { context.state.score }</div>
 			{ DisplayString() }
+			{ Input() }
 			<div className="text">{ context.state.input }</div>
+			<div className="type">{ context.state.usrTyped }</div>
+			<div className="to-type">{ context.state.toType }</div>
 		</div>
 	);
 };
