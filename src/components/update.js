@@ -12,7 +12,8 @@ const check = (key) =>
 const tab = () => context.actions.init();
 
 const Update = (key) =>
-	(key === 'Tab' || key === 'Enter'
+	((key === 'Tab' || key === 'Enter')
+	&& (context.state.count === 0)
 		? tab()
 		: check(key));
 

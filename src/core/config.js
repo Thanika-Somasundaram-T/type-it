@@ -1,5 +1,6 @@
 const config = {
-	increment: 10,
+	increment: 1,
+	bonus: 5,
 };
 
 export default config;

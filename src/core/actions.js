@@ -16,12 +16,14 @@ const updateInput = ({ state, data }) => ({
 	count: state.count + 1,
 	toType: Service.UpdateToType(state),
 	value: true,
+	score: state.score + config.increment,
 
 });
 
-const updateUsrTyped = ({ data }) => ({
+const updateUsrTyped = ({ state, data }) => ({
 	usrTyped: data,
 	value: false,
+	score: state.score - config.increment,
 });
 
 const refreshString = ({ state }) => ({
@@ -30,7 +32,7 @@ const refreshString = ({ state }) => ({
 	usrTyped: '',
 	rnString: Service.RandomString(),
 	toType: 'Enter',
-	score: state.score + config.increment,
+	score: state.score + config.bonus,
 });
 
 const actions = {
