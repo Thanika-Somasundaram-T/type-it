@@ -4,9 +4,9 @@ import { React } from 'react';
 import Update from './update';
 
 const Input = () =>
-	<div
+	<input
 		className="input"
-		value={ false }
+		autoFocus={ true }
 		contentEditable={ true }
 		onKeyUp={ (evt) => Update(evt.key) }
 	/>;
