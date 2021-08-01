@@ -5,7 +5,7 @@ const DisplayString = () =>
 	<div
 		className="display"
 	>
-		{ context.state.rnString }
+		{ context.state.question }
 	</div>;
 
 export default DisplayString;

@@ -1,14 +1,15 @@
-/* eslint-disable no-magic-numbers */
-/* eslint-disable no-console */
 import { React } from 'react';
-import Update from './update';
+import context from '../core/context';
 
 const Input = () =>
 	<input
 		className="input"
 		autoFocus={ true }
+		tabIndex="0"
 		contentEditable={ true }
-		onKeyUp={ (evt) => Update(evt.key) }
+		onKeyUp={ (evt) => {
+			context.actions.updateInput(evt.key);
+		} }
 	/>;
 
 export default Input;

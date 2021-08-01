@@ -1,46 +1,19 @@
 import config from './config';
-import Service from '../services/getString';
+import Service from '../services/type-it';
 
-const init = ({ state }) => ({
-	toType: state.rnString[0],
-	usrTyped: '',
-	value: false,
-});
-
-// const increaseScore = ({ state, data }) => ({
-// 	count: state.count + data,
-// });
-
-const updateInput = ({ state, data }) => ({
-	input: state.input + data,
-	count: state.count + 1,
-	toType: Service.UpdateToType(state),
-	value: true,
-	score: state.score + config.increment,
-
-});
-
-const updateUsrTyped = ({ state, data }) => ({
-	usrTyped: data,
-	value: false,
-	score: state.score - config.increment,
-});
-
-const refreshString = ({ state }) => ({
-	count: 0,
-	input: '',
-	usrTyped: '',
-	rnString: Service.RandomString(),
-	toType: 'Enter',
-	score: state.score + config.bonus,
-});
+const updateInput = ({ state, data }) =>
+	Service.checkKey(data)
+		&& (Service.checkChar(state, data)
+			? {
+				answer: Service.checkAns(state, data),
+				score: state.score + config.increment,
+				question: Service.checkQues(state, data),
+				error: '',
+			}
+			: { error: data });
 
 const actions = {
-	init,
-	// increaseScore,
 	updateInput,
-	refreshString,
-	updateUsrTyped,
 };
 
 export default actions;

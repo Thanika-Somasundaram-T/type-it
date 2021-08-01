@@ -1,11 +1,10 @@
-/* eslint-disable no-console */
 import { React, useEffect } from 'react';
 import './App.scss';
 import SampleService from './services/sample';
 import context from './core/context';
 import DisplayString from './components/displayString';
 import Input from './components/input';
-import TrueFalse from './components/tureOrNot';
+import Update from './components/update';
 
 const App = () => {
 	useEffect(SampleService.sayHai, []);
@@ -13,16 +12,10 @@ const App = () => {
 	return (
 		<div className="App">
 			<div className="score"> SCORE { context.state.score }</div>
-			{ TrueFalse() }
 			{ DisplayString() }
 			{ Input() }
-			<div className="text">{ context.state.input }</div>
-			<div
-				className="to-type"
-				style={ context.state.toType !== ''
-					? { minWidth: '10%' }
-					: { } }
-			>{ context.state.toType }</div>
+			{ Update() }
+			<div className="text">{ context.state.answer }</div>
 		</div>
 	);
 };

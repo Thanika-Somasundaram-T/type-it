@@ -1,12 +1,9 @@
 
 const seed = {
 	score: 0,
-	input: '',
-	rnString: 'welcome',
-	count: 0,
-	usrTyped: '',
-	toType: '',
-	value: false,
+	answer: '',
+	question: 'welcome',
+	error: '',
 };
 
 export default seed;

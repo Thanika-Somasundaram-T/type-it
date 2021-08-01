@@ -1,20 +1,15 @@
-/* eslint-disable no-magic-numbers */
-/* eslint-disable no-console */
+import React from 'react';
+import Service from '../services/type-it';
 import context from '../core/context';
 
-const check = (key) =>
-	(key.length < 2
-		? context.state.rnString[context.state.count] === key
-			? context.actions.updateInput(key)
-			: context.actions.updateUsrTyped(key)
-		: null);
-
-const tab = () => context.actions.init();
-
-const Update = (key) =>
-	((key === 'Tab' || key === 'Enter')
-	&& (context.state.count === 0)
-		? tab()
-		: check(key));
+const Update = () =>
+	<div>
+		{ context.state.error !== ''
+			? <div className="error">{ context.state.error }</div>
+			: <div className="img"/> }
+		<div className="question">
+			{ Service.toType() }
+		</div>
+	</div>;
 
 export default Update;
