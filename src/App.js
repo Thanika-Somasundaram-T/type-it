@@ -15,7 +15,6 @@ const App = () => {
 			{ DisplayString() }
 			{ Input() }
 			{ Update() }
-			<div className="text">{ context.state.answer }</div>
 		</div>
 	);
 };
