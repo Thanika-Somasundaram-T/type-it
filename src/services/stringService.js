@@ -6,34 +6,30 @@ const five = 5;
 
 const refresh = Math.floor(Math.random() * ten) + five;
 
-const RandomString = () => rndString(refresh);
+const randomString = () => rndString(refresh);
 
 const checkChar = ({ question, answer }, key) =>
 	question[answer.length] === key;
 
-const checkQues = ({ question, answer }, data) =>
-	(question === (answer + data)
-		? RandomString()
-		: question);
-
-const checkAns = ({ question, answer }, data) =>
-	(question === (answer + data)
-		? ''
-		: answer + data);
-
 const checkKey = (key) =>
 	key.length === 1;
+
+const check = ({ question, answer }) =>
+	question === answer;
 
 const toType = () =>
 	context.state.question[context.state.answer.length];
 
+const displayQuestion = ({ question, answer }) =>
+	question.slice(answer.length);
+
 const Service = {
-	RandomString,
+	randomString,
 	toType,
-	checkQues,
-	checkAns,
 	checkChar,
 	checkKey,
+	check,
+	displayQuestion,
 };
 
 export default Service;

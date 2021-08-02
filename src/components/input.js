@@ -8,7 +8,10 @@ const Input = () =>
 		tabIndex="0"
 		contentEditable={ true }
 		onKeyUp={ (evt) => {
+			context.actions.updateError(evt.key);
 			context.actions.updateInput(evt.key);
+			context.actions.updateScore();
+			context.actions.resetQuestion();
 		} }
 	/>;
 

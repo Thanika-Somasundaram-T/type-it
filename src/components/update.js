@@ -1,5 +1,5 @@
 import React from 'react';
-import Service from '../services/type-it';
+import Service from '../services/stringService';
 import context from '../core/context';
 
 const Update = () =>
