@@ -10,7 +10,13 @@
 .score{
 	position: absolute;
 	font-size: 3em;
-	text-align: end;
+}
+
+.life {
+	position: absolute;
+	top: 10%;
+	right: 0%;
+	font-size: 2em;
 }
 
 .img {
@@ -85,5 +91,3 @@
 .span {
 	color: #02494e;
 }
-
-

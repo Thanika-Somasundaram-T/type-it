@@ -17,6 +17,7 @@ const updateError = ({ state, data }) =>
 		: {
 			error: data,
 			score: state.score - config.increment,
+			life: state.life - config.increment,
 		});
 
 const updateScore = ({ state }) =>

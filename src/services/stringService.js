@@ -23,6 +23,9 @@ const toType = () =>
 const displayQuestion = ({ question, answer }) =>
 	question.slice(answer.length);
 
+const checkLife = ({ life }) =>
+	life === 0;
+
 const Service = {
 	randomString,
 	toType,
@@ -30,6 +33,7 @@ const Service = {
 	checkKey,
 	check,
 	displayQuestion,
+	checkLife,
 };
 
 export default Service;
