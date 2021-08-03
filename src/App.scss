@@ -2,6 +2,7 @@
 	text-align: center;
 	font-family: 'Times New Roman';
 
+
 	button {
 		font-weight: bold;
 	}
@@ -40,7 +41,7 @@
 }
 
 .input {
-	// position: absolute;
+	position: absolute;
 	height: 0%;
 	width: 0%;
 	outline: none;
@@ -90,4 +91,14 @@
 
 .span {
 	color: #02494e;
+}
+
+.game-over{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: #03545a;
+	font-size: 2em;
+	color: white;
+	padding-top: 10%;
 }
