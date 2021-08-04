@@ -17,23 +17,19 @@ const checkKey = (key) =>
 const check = ({ question, answer }) =>
 	question === answer;
 
-const toType = () =>
-	context.state.question[context.state.answer.length];
-
 const displayQuestion = ({ question, answer }) =>
 	question.slice(answer.length);
 
-const checkLife = ({ life }) =>
-	life <= 0;
+const upcomingChar = () =>
+	context.state.question[context.state.answer.length];
 
-const Service = {
+const StringService = {
 	randomString,
-	toType,
+	upcomingChar,
 	checkChar,
 	checkKey,
 	check,
 	displayQuestion,
-	checkLife,
 };
 
-export default Service;
+export default StringService;
