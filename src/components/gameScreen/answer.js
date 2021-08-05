@@ -1,4 +1,4 @@
-import React from '.react';
+import React from 'react';
 import context from '../../core/context';
 
 const Answer = () =>

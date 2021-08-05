@@ -1,5 +1,5 @@
 import { React } from 'react';
-import context from '../core/context';
+import context from '../../core/context';
 
 const Input = () =>
 	<input
@@ -7,6 +7,7 @@ const Input = () =>
 		autoFocus={ true }
 		tabIndex="0"
 		contentEditable={ true }
+		value={ context.state.answer }
 		onKeyUp={ (evt) => {
 			context.actions.updateError(evt.key);
 			context.actions.updateInput(evt.key);
