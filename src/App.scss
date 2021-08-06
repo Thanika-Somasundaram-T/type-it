@@ -102,3 +102,18 @@
 	color: white;
 	padding-top: 10%;
 }
+
+.health-bar {
+	position: absolute;
+	height: 3%;
+	width: 15%;
+	top: 5%;
+	left: calc(50% - 7.5%);
+	border: 3px solid black;
+}
+
+.positive {
+	background-color: greenyellow;
+	width: 20%;
+	height: 100%;
+}

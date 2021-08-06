@@ -6,6 +6,7 @@ const seed = {
 	question: 'welcome',
 	error: '',
 	life: config.life,
+	healthBar: 100,
 };
 
 export default seed;

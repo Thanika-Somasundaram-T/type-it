@@ -16,14 +16,15 @@ const updateError = ({ state, data }) =>
 		}
 		: {
 			error: data,
-			score: state.score - config.increment,
-			life: state.life - config.increment,
+			score: state.score - config.decrement,
+			healthBar: state.healthBar - config.decreaseHealth,
 		});
 
 const updateScore = ({ state }) =>
 	StringService.check(state)
 		&& {
 			score: state.score + config.bonus,
+			healthBar: state.healthBar + config.decreaseHealth,
 		};
 
 const resetQuestion = ({ state }) =>
@@ -36,12 +37,23 @@ const resetQuestion = ({ state }) =>
 const restart = ({ seed }) =>
 	seed;
 
+const decreaseLife = ({ state }) => ({
+	healthBar: 100,
+	life: state.life - config.decrement,
+});
+
+const decreaseHealth = ({ state }) => ({
+	healthBar: state.healthBar - config.decreaseHealth,
+});
+
 const actions = {
 	updateInput,
 	updateError,
 	updateScore,
 	resetQuestion,
 	restart,
+	decreaseHealth,
+	decreaseLife,
 };
 
 export default actions;
