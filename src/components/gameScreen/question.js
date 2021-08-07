@@ -6,7 +6,7 @@ const Question = () =>
 	<div
 		className="display"
 	>
-		<span className="span">{ context.state.answer }</span>
+		<span className="answer-typed">{ context.state.answer }</span>
 		<span>{ StringService.displayQuestion(context.state) }</span>
 	</div>;
 

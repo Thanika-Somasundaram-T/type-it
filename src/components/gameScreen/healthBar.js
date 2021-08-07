@@ -1,9 +1,10 @@
 import React from 'react';
 import context from '../../core/context';
+import GameService from '../../services/gameService';
 import Health from './health';
 
 const getStyle = () => ({
-	backgroundColor: 'greenyellow',
+	backgroundColor: GameService.colorIndicator(context.state.healthBar),
 	width: `${ context.state.healthBar }%`,
 	height: '100%',
 });

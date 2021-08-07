@@ -1,5 +1,6 @@
 import config from './config';
 import StringService from '../services/stringService';
+import GameService from '../services/gameService';
 
 const updateInput = ({ state, data }) =>
 	StringService.checkChar(state, data)
@@ -24,7 +25,7 @@ const updateScore = ({ state }) =>
 	StringService.check(state)
 		&& {
 			score: state.score + config.bonus,
-			healthBar: state.healthBar + config.decreaseHealth,
+			healthBar: GameService.increaseHealth(state),
 		};
 
 const resetQuestion = ({ state }) =>
