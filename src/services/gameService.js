@@ -11,17 +11,17 @@ const checkError = ({ error }) =>
 	error === '';
 
 const increaseHealth = ({ healthBar }) =>
-	healthBar < max && healthBar + config.decreaseHealth;
+	(healthBar < max) && healthBar + config.decreaseHealth;
 
 const checkHealthBar = ({ healthBar }) =>
 	healthBar <= 0;
 
 const colorIndicator = (healthBar) =>
-	(healthBar < low
+	(healthBar <= low
 		? 'red'
-		: healthBar < mid
+		: healthBar <= mid
 			? 'yellow'
-			: 'greenyellow');
+			: 'greenYellow');
 
 const GameService = {
 	isAlive,
